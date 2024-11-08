@@ -169,7 +169,7 @@ export default function ProblemSection() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white text-center py-20 px-4 md:px-0 font-hammersmith-one">
+    <div className="min-h-screen bg-black text-white text-center py-20 px-4 md:px-0 font-poppins">
       <h2 className="text-5xl font-bold mb-8">THE PROBLEM WE ARE SOLVING</h2>
       <p className="text-xl mb-4">
         While music streaming has been popular these days,

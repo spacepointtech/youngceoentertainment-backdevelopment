@@ -251,6 +251,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { FaArrowUp, FaInstagram, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import { Toaster, toast } from 'sonner';
 
 export default function FooterSection() {
   const [language, setLanguage] = useState('English');
@@ -264,11 +265,12 @@ export default function FooterSection() {
 
   const handleSubscribe = () => {
     if (email.trim() === '') {
-      alert('Email field cannot be blank');
+      // Display toast if email is blank
+      toast.error('Email field cannot be blank');
       return;
     }
     // Subscription logic here
-    alert(`Subscribed successfully with ${email}`);
+    toast.success('Subscribed successfully!');
     setIsSubscribed(true);
   };
 
@@ -282,12 +284,24 @@ export default function FooterSection() {
     setIsSidebarOpen(false);
   };
 
+  const handleGoToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Use setTimeout to display the toast after a slight delay, giving time for the scroll to complete
+    setTimeout(() => {
+      toast.success("WE ARE ON THE YOUNG CEO ENTERTAINMENT'S HOME PAGE");
+    }, 600); // Adjust the delay if necessary to match the scroll duration
+  };
+
   return (
-    <footer className="bg-black text-white py-12 font-hammersmith-one relative">
+    <footer className="bg-black text-white py-12 font-poppins relative">
+      {/* Toast Notification */}
+      <Toaster richColors closeButton position="top-center" />
+
       {/* Go to Top Button */}
       <div className="text-center mb-8">
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={handleGoToTop} // Using handleGoToTop here
           className="go-to-top"
         >
           GO TO TOP <FaArrowUp className="inline-block ml-2" />
@@ -335,20 +349,6 @@ export default function FooterSection() {
           >
             Subscribe
           </button>
-        </div>
-      </div>
-      
-      {/* Language Dropdown */}
-      <div className="absolute top-12 right-5 md:right-16 flex justify-center items-center mt-8 md:mt-0">
-        <div className="relative">
-          <select
-            value={language}
-            onChange={handleLanguageChange}
-            className="language-dropdown"
-          >
-            <option value="English">English</option>
-            {/* Add more languages here */}
-          </select>
         </div>
       </div>
       

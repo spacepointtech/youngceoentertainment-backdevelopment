@@ -69,7 +69,7 @@ import React from 'react';
 
 export default function PricingSection() {
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4 md:px-0 font-hammersmith-one">
+    <div className="min-h-screen bg-black text-white py-20 px-4 md:px-0 font-poppins">
       <h2 className="text-4xl font-bold text-center mb-10">
         Craft Your Sound, Conquer the World:<br />
         Focus on your music, we&apos;ll handle the reach

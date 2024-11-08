@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function ThirdSection() {
 
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4 md:px-0 font-hammersmith-one">
+    <div className="min-h-screen bg-black text-white py-20 px-4 md:px-0 font-poppins">
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         
         {/* Illustration Section */}

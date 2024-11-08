@@ -87,7 +87,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-black bg-opacity-[30%] text-white p-4 fixed w-full z-10">
+    <nav className="bg-black bg-opacity-[30%] text-white p-4 fixed w-full z-10 font-poppins">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-lg flex items-center">
           {/* Toggle Menu for Small Screens */}
