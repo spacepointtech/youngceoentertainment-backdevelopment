@@ -39,7 +39,6 @@
 //   );
 // }
 
-
 'use client';
 import '@/app/globals.css';
 import React, { useState } from 'react';
@@ -48,6 +47,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Toaster, toast } from 'sonner';  // Import toast for notifications
 import { useRouter } from 'next/navigation';
+import '@/app/style.css'
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -103,7 +103,7 @@ export default function LoginPage() {
               type="email"
               name="email"
               placeholder="Email"
-              className="login-input"
+              className="login-input text-black font-poppins"
               required
               value={formData.email}
               onChange={handleInputChange}
@@ -112,7 +112,7 @@ export default function LoginPage() {
               type="password"
               name="password"
               placeholder="Password"
-              className="login-input"
+              className="login-input text-black font-poppins"
               required
               value={formData.password}
               onChange={handleInputChange}

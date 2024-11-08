@@ -166,7 +166,6 @@
 //   );
 // }
 
-
 'use client';
 import React, { useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
@@ -257,7 +256,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="login-wrapper">
+    <div className="login-wrapper font-poppins">
       <Toaster richColors closeButton position="top-center" />
       <div className="background-image"></div>
       <div className="login-content">
@@ -277,7 +276,7 @@ export default function SignupPage() {
               type="email" 
               name="email"
               placeholder="Email" 
-              className="login-input" 
+              className="login-input text-black font-poppins" 
               required 
               value={formData.email}
               onChange={handleInputChange}
@@ -286,7 +285,7 @@ export default function SignupPage() {
               type="password" 
               name="password"
               placeholder="Password" 
-              className="login-input" 
+              className="login-input text-black font-poppins" 
               required 
               value={formData.password}
               onChange={handleInputChange}

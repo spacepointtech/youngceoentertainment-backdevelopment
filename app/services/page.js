@@ -51,7 +51,7 @@ export default function ServicesPage() {
           <div className="md:w-1/2 bg-[#0F0F0F] rounded-lg p-6">
             
             <Image
-              src="/images/dashboard.png"
+              src="/images/Dashboard.png"
               alt="Artist Dashboard"
               width={599}
               height={575}
