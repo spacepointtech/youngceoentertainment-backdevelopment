@@ -269,7 +269,7 @@ export default function Dashboard() {
         {/* Horizontal Line */}
         <div className="border-t-2 border-white absolute top-14 w-[1092px]"></div>
 
-        {/* Timer Box */}
+        {/* Timer Box  w-4/5 */}
         <section className="p-6 bg-[#1F1F1F] h-[250px] border border-[#EBEBEB] border-opacity-15 rounded-2xl mt-2 shadow-2xl shadow-gray-500">
           <div className="flex items-center justify-between">
             <h2 className="text-4xl font-bold">Your Song Goes Live In... Stay Tuned!</h2>

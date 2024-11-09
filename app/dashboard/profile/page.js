@@ -12,9 +12,10 @@ export default function Profile() {
     
       <main className="flex-1 p-6 flex flex-col gap-6 text-white">
       <Header /> 
+      <div className="border-t-2 border-white absolute top-14 w-[1092px]"></div>
         {/* Profile Section */}
          {/* Profile Section */}
-         <div className="h-[308px] pl-[45px] pr-[434px] py-[74px] left-[330px] top-[135px] absolute bg-gradient-to-t from-black to-[#666666] rounded-[32px] justify-start items-center inline-flex">
+         <div className="h-[308px] pl-[45px] pr-[434px] py-[74px] left-[330px] top-[120px] absolute bg-gradient-to-t from-black to-[#666666] rounded-[32px] justify-start items-center inline-flex">
           <div className="w-[595px] h-40 relative">
             <img className="w-40 h-40 left-0 top-0 absolute rounded-full shadow" src="https://via.placeholder.com/160x160" alt="Profile"/>
             <div className="w-[419px] h-[132px] left-[176px] top-[12px] absolute">
