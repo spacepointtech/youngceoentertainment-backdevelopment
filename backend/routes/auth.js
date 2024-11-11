@@ -4,9 +4,11 @@ const User = require('../models/User');  // Ensure the User model path is correc
 
 const router = express.Router();  // Initialize the router
 
+
 // POST /signup - Register a new user
 router.post('/signup', async (req, res) => {
   const { email, password } = req.body;
+
 
   try {
     // Check if user already exists
@@ -62,5 +64,7 @@ router.post('/login', async (req, res) => {
 });
 
 
+
 // Ensure router is exported correctly
 module.exports = router;
+
