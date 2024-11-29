@@ -114,10 +114,7 @@ export default function Navbar() {
               <span className="relative z-10">Home</span>
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
             </Link>
-            <Link href="/music" className="group relative">
-              <span className="relative z-10">Artists Engagement</span>
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>
-            </Link>
+    
             <Link href="/pricing" className="group relative">
               <span className="relative z-10">Pricing</span>
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300 ease-in-out group-hover:w-full"></span>

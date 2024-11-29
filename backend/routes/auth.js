@@ -7,7 +7,7 @@ const router = express.Router();  // Initialize the router
 
 // POST /signup - Register a new user
 router.post('/signup', async (req, res) => {
-  const { email, password } = req.body;
+  const { artistname, email, password } = req.body;
 
 
   try {
@@ -22,6 +22,7 @@ router.post('/signup', async (req, res) => {
 
     // Create a new user
     const newUser = new User({
+      artistname,
       email,
       password: hashedPassword
     });

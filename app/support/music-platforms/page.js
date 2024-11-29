@@ -1,6 +1,7 @@
 'use client';
 import '@/app/style.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaSearch, FaChevronRight, FaChevronDown, FaDesktop } from 'react-icons/fa';
 
@@ -18,7 +19,6 @@ const PlatformSupport = () => {
 
   return (
     <div className="support-page bg-black text-white font-poppins">
-      
       {/* Hero Section with Wave */}
       <div className="hero-section relative">
         <div className="container mx-auto text-center pt-24">
@@ -43,31 +43,30 @@ const PlatformSupport = () => {
 
       {/* Back Link */}
       <div className="container mx-auto px-6 py-4">
-        <a href="/support" className="back-link text-white text-lg opacity-50">
+        <Link href="/support" className="back-link text-white text-lg opacity-50">
           &lt; Back
-        </a>
+        </Link>
       </div>
 
       {/* Support Categories */}
       <div className="container mx-auto px-6 pb-16">
-        <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
+        <div className="faq-header flex items-center justify-between mb-6">
           <div className="flex flex-col">
-            <FaDesktop className="text-4xl mb-4 opacity-30"/>
+            <FaDesktop className="text-4xl mb-4 opacity-30" />
             <h2 className="text-2xl font-semibold">Music Platforms</h2>
           </div>
           <div className="faq-logo">
             <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>Advice on music streaming, download social media services</p>
-        <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
+        <p className="text-sm opacity-75 mb-6">Advice on music streaming, download social media services</p>
+        <p className="text-sm opacity-50 mb-12">{filteredFaqItems.length} Articles</p>
 
-       
         <div className="faq-container bg-[#484848] bg-opacity-[24%] border border-[#A6A6A6] rounded-lg p-6">
           <div className="faq-list">
             {filteredFaqItems.length > 0 ? (
               filteredFaqItems.map((item, index) => (
-                <div key={index} className={`faq-item flex flex-col py-4 border-b border-gray-700 ${openIndex !== null && openIndex !== index ? 'blur-md' : ''}`}>
+                <div key={index} className="faq-item flex flex-col py-4 border-b border-gray-700">
                   <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleDropdown(index)}>
                     <p>{item.question}</p>
                     {openIndex === index ? <FaChevronDown /> : <FaChevronRight />}
@@ -88,7 +87,6 @@ const PlatformSupport = () => {
     </div>
   );
 };
-
 
 const faqItems = [
    {

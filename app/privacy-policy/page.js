@@ -3,6 +3,7 @@
 import '@/app/style.css';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   const router = useRouter(); // Initialize the router
@@ -32,7 +33,7 @@ export default function PrivacyPolicy() {
         </p>
 
         <p className="text-[#a6a6a6] text-justify text-xl">
-          Your use of Young CEO Entertainment's services is subject to our Terms of Service, which includes this Privacy Policy. Any terms used but not defined here will have the meanings assigned to them in the <span className="text-[#74B7FF]"> Terms of Service. </span>
+          Your use of Young CEO Entertainment's services is subject to our Terms of Service, which includes this Privacy Policy. Any terms used but not defined here will have the meanings assigned to them in the <Link href="/terms"> <span className="text-[#74B7FF]"> Terms of Service. </span> </Link> 
         </p>
 
         <p className="text-[#a6a6a6] mb-6 mt-6 text-xl text-justify">

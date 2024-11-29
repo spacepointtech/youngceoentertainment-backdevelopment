@@ -7,7 +7,7 @@ export default function ThirdSection() {
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         
         {/* Illustration Section */}
-        <div className="flex justify-center md:justify-start mt-4 md:mt-0">
+        <div className="flex justify-center md:justify-start hover:scale-125 transition-all duration-500 ease-in-out animate-fade-in mt-4 md:mt-0">
           <div
             className="illustration-container"
           >

@@ -258,6 +258,7 @@ export default function Dashboard() {
   }, [targetDate]);
 
   return (
+    
     <div className="flex w-full h-[1500px] bg-[#0F0F0F]">
       {/* Sidebar */}
       <Sidebar progress={progress} />
@@ -265,9 +266,6 @@ export default function Dashboard() {
       <main className="flex-1 p-6 flex flex-col gap-6 text-white">
         {/* Header */}
         <Header />
-
-        {/* Horizontal Line */}
-        <div className="border-t-2 border-white absolute top-14 w-[1092px]"></div>
 
         {/* Timer Box  w-4/5 */}
         <section className="p-6 bg-[#1F1F1F] h-[250px] border border-[#EBEBEB] border-opacity-15 rounded-2xl mt-2 shadow-2xl shadow-gray-500">

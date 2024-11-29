@@ -25,7 +25,7 @@ export default function SupportSection() {
             className="block text-sm mt-2 text-gray-400 hover:text-gray-200 transition duration-300"
             style={{ opacity: 0.85 }}
           >
-            read more about what we support and care for you
+            read more about our support policies!
           </a>
           <ul className="text-2xl list-disc list-inside mt-8 space-y-2">
             <li>Fair pricing and royalties for artists</li>

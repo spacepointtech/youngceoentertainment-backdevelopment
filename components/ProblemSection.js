@@ -165,7 +165,7 @@ export default function ProblemSection() {
     { icon: <Image src="/images/peleton.svg" alt="Shazam" width={35} height={35} />, alt: 'Peleton Music'},
     { icon: <Image src="/images/tunedglobal.png" alt="Shazam" width={220} height={220} />, alt: 'Tuned Global'},
     { icon: <Image src="/images/vevo.png" alt="Shazam" width={170} height={170} />, alt: 'Vevo TV Music'},
-    { icon: <Image src="/images/kkbox.png" alt="Shazam" width={130} height={130} />, alt: ''},
+    
   ];
 
   return (
@@ -200,7 +200,7 @@ export default function ProblemSection() {
       </div>
 
       <p className="italic mb-8 mt-4 text-opacity-20 cursor-pointer" onClick={() => setShowModal(true)}>
-        MANY MORE...
+        and 140+ Streaming Platforms...
       </p>
 
       <Link href="/signup">

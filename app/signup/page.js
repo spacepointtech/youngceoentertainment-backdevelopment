@@ -175,6 +175,7 @@ import { Toaster, toast } from 'sonner';
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({
+    artistname:'',   
     email: '',
     password: '',
     agreePolicy: false
@@ -259,7 +260,7 @@ export default function SignupPage() {
     <div className="login-wrapper font-poppins">
       <Toaster richColors closeButton position="top-center" />
       <div className="background-image"></div>
-      <div className="login-content">
+      <div className="login-content font-poppins">
         <div className="logo-container">
           <Link href="/">
             <Image src="/images/logo.png" alt="YCE Logo" width={100} height={100} />
@@ -272,10 +273,19 @@ export default function SignupPage() {
             <Link href="/login" className="signup-link">Log In</Link>
           </p>
           <form onSubmit={handleSubmit}>
+          <input 
+              type="name" 
+              name="artistname"
+              placeholder="Artist Name" 
+              className="login-input text-black font-poppins" 
+              required 
+              value={formData.artistname}
+              onChange={handleInputChange}
+            />
             <input 
               type="email" 
               name="email"
-              placeholder="Email" 
+              placeholder="Enter Your Email" 
               className="login-input text-black font-poppins" 
               required 
               value={formData.email}
@@ -284,7 +294,7 @@ export default function SignupPage() {
             <input 
               type="password" 
               name="password"
-              placeholder="Password" 
+              placeholder="Create New Password" 
               className="login-input text-black font-poppins" 
               required 
               value={formData.password}
@@ -301,7 +311,7 @@ export default function SignupPage() {
                 onChange={handleInputChange}
               />
               <label htmlFor="agree-policy" className="policy-label">
-                I agree with the policy of YCE
+                I agree with the <Link href="/privacy-policy" className="text-blue-500">policy</Link>  of YCE
               </label>
             </div>
             <button type="submit" className="login-button">

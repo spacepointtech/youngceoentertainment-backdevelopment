@@ -1,15 +1,14 @@
-
 'use client';
 import '@/app/style.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
-import { FaSearch, FaChevronRight, FaChevronDown, FaUser, FaHome } from 'react-icons/fa';
+import { FaSearch, FaChevronRight, FaChevronDown, FaUser, FaHome, FaUserAlt } from 'react-icons/fa';
 
 const AccountSupport = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openIndex, setOpenIndex] = useState(null);
 
-  
   const filteredFaqItems = faqItems.filter(item =>
     item.question.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -38,37 +37,36 @@ const AccountSupport = () => {
           </div>
         </div>
 
-       
         <div className="wave-shape"></div>
       </div>
 
       {/* Back Link */}
       <div className="container mx-auto px-6 py-4">
-        <a href="/support" className="back-link text-white text-lg opacity-50">
+        <Link href="/support" className="back-link text-white text-lg opacity-50">
           &lt; Back
-        </a>
+        </Link>
       </div>
 
       {/* Support Categories */}
       <div className="container mx-auto px-6 pb-16">
-        <div className={`faq-header flex items-center justify-between mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>
+        <div className="faq-header flex items-center justify-between mb-6">
           <div className="flex flex-col">
-            <FaHome className="text-4xl mb-4 opacity-30"/>
+            <FaUserAlt className="text-4xl mb-4 opacity-30"/>
             <h2 className="text-2xl font-semibold">Your Account</h2>
           </div>
           <div className="faq-logo">
             <Image src="/images/logo.png" alt="Young CEO Entertainment" height={200} width={200} />
           </div>
         </div>
-        <p className={`text-sm opacity-75 mb-6 ${openIndex !== null ? 'blur-md' : ''}`}>How to get Started releasing music</p>
-        <p className={`text-sm opacity-50 mb-12 ${openIndex !== null ? 'blur-md' : ''}`}>{filteredFaqItems.length} Articles</p>
+        <p className="text-sm opacity-75 mb-6">How to get Started releasing music</p>
+        <p className="text-sm opacity-50 mb-12">{filteredFaqItems.length} Articles</p>
 
         {/* FAQ Container */}
         <div className="faq-container bg-[#484848] bg-opacity-[24%] border border-[#A6A6A6] rounded-lg p-6">
           <div className="faq-list">
             {filteredFaqItems.length > 0 ? (
               filteredFaqItems.map((item, index) => (
-                <div key={index} className={`faq-item flex flex-col py-4 border-b border-gray-700 ${openIndex !== null && openIndex !== index ? 'blur-md' : ''}`}>
+                <div key={index} className="faq-item flex flex-col py-4 border-b border-gray-700">
                   <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleDropdown(index)}>
                     <p>{item.question}</p>
                     {openIndex === index ? <FaChevronDown /> : <FaChevronRight />}
@@ -90,9 +88,8 @@ const AccountSupport = () => {
   );
 };
 
-
 const faqItems = [
-  { question: 'When is my subscription renewal date?', answer: 'Your subscription renewal date is typically one year from the date of your last payment. You can check the exact renewal date by logging into your account and navigating to the "Subscription" section.' },
+  { question: 'When is my subscription renewal date?', answer: 'Your subscription renewal date is typically one year from the date of your last payment. You can check the exact renewal date by logging into your account and navigating to the "PROFILE" section.' },
   { question: 'How do I see my orders & transaction history?', answer: 'To view your orders and transaction history, log into your account and go to the "Orders" section under your profile. There, you can see a detailed list of all your past transactions.' },
   { question: 'When will I get a response from my support query?', answer: 'Support queries are typically responded to within 24-48 hours. During peak times, it may take slightly longer. You will receive a notification once your query has been addressed.' },
   { question: 'What if I forgot my password?', answer: 'If you forgot your password, you can reset it by clicking on the "Forgot Password" link on the login page. Follow the instructions to receive a password reset link via email.' },

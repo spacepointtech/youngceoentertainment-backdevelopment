@@ -86,7 +86,7 @@ export default function LoginPage() {
     <div className="login-wrapper">
       <Toaster richColors closeButton position="top-center" />
       <div className="background-image"></div>
-      <div className="login-content">
+      <div className="login-content font-poppins">
         <div className="logo-container">
           <Link href="/">
             <Image src="/images/logo.png" alt="YCE Logo" width={100} height={100} />
